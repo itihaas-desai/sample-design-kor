@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SampleDesign — 쇼케이스</title>
+<style>
+/* ... same styles ... */
+</style>
+</head>
+<body>
+<header>
+<nav>
+<a href="#brand">브랜드</a>
+<a href="#print">인쇄</a>
+<a href="#book">책</a>
+<a href="#sports">스포츠</a>
+<a href="#digital">디지털</a>
+<a href="#contact">연락처</a>
+</nav>
+</header>
+
+<div class="hero">
+<h1>SampleDesign 쇼케이스</h1>
+<p>브랜딩, 인쇄, 책, 스포츠 비주얼 및 디지털 디자인의 창의적인 솔루션.</p>
+<a href="#brand">작품 보기</a>
+</div>
+
+<section id="brand">
+<div class="text">
+<h2>브랜드 디자인</h2>
+<p>관객에게 공감을 주는 강력한 시각적 아이덴티티를 구축하여 브랜드를 돋보이게 합니다.</p>
+</div>
+<img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?..." alt="Brand Design">
+</section>
+
+<section id="print">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?..." alt="Print Design">
+<div class="text">
+<h2>인쇄 디자인</h2>
+<p>메시지를 효과적으로 전달하도록 설계된 시선을 끄는 브로셔, 포스터 및 캠페인.</p>
+</div>
+</section>
+
+<section id="book">
+<div class="text">
+<h2>책 디자인</h2>
+<p>표지 아트부터 우아한 레이아웃까지, 우리의 책 디자인은 이야기를 생생하게 만듭니다.</p>
+</div>
+<img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?..." alt="Book Design">
+</section>
+
+<section id="sports">
+<img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?..." alt="Sports Design">
+<div class="text">
+<h2>스포츠 디자인</h2>
+<p>팀, 이벤트 및 스포츠 캠페인을 위한 역동적인 그래픽으로 활력과 흥분을 제공합니다.</p>
+</div>
+</section>
+
+<section id="digital">
+<div class="text">
+<h2>디지털 디자인</h2>
+<p>현대적인 UI/UX, 웹사이트 및 SNS 크리에이티브로 온라인 관객을 사로잡습니다.</p>
+</div>
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?..." alt="Digital Design">
+</section>
+
+<section id="contact">
+<div class="text">
+<h2>연락처</h2>
+<p><strong>hello@sampledesign.com</strong> 으로 이메일을 보내거나 소셜 미디어에서 연결하세요.</p>
+</div>
+</section>
+
+<footer>
+<p>© 2025 SampleDesign. 모든 권리 보유.</p>
+</footer>
+
+<button class="back-to-top" onclick="scrollToTop()">↑ Top</button>
+<script>
+window.addEventListener('scroll', ()=>{const btn=document.querySelector('.back-to-top');if(window.scrollY>300)btn.style.display='block';else btn.style.display='none';});
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+</script>
+</body>
+</html>
