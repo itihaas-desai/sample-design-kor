@@ -5,71 +5,159 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SampleDesign — 쇼케이스</title>
 <style>
-/* ... same styles ... */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  scroll-behavior: smooth;
+}
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index:1000;
+}
+header nav {
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  padding:18px;
+}
+header nav a {
+  text-decoration:none;
+  color:#444;
+  font-weight:600;
+  padding:8px 14px;
+  border-radius:6px;
+  transition: background 0.3s, color 0.3s;
+}
+header nav a:hover {
+  background:#f3f3f3;
+  color:#000;
+}
+/* Hero Section */
+.hero {
+  height:100vh;
+  background:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  text-align:center;
+  color:white;
+  padding:0 20px;
+}
+.hero h1 {
+  font-size:3rem;
+  margin-bottom:10px;
+  text-shadow:2px 2px 6px rgba(0,0,0,0.5);
+}
+.hero p {
+  font-size:1.3rem;
+  max-width:600px;
+  margin-bottom:20px;
+  text-shadow:1px 1px 4px rgba(0,0,0,0.6);
+}
+.hero a {
+  text-decoration:none;
+  background:#ff5722;
+  color:white;
+  padding:12px 24px;
+  border-radius:8px;
+  font-size:1rem;
+  transition: background 0.3s;
+}
+.hero a:hover {
+  background:#e64a19;
+}
+/* Section Layout */
+section {
+  padding:100px 40px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:40px;
+}
+section:nth-child(even){background:#fff;}
+section:nth-child(odd){background:#f4f4f4;}
+section .text { flex:1 1 400px; max-width:500px;}
+section .text h2{ font-size:2rem; margin-bottom:15px;}
+section .text p{ line-height:1.6; color:#555;}
+section img{ flex:1 1 400px; max-width:500px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:transform 0.3s;}
+section img:hover{ transform:scale(1.03);}
+#contact{text-align:center;}
+#contact p{font-size:1.2rem;}
+footer{background:#222;color:#ddd;text-align:center;padding:20px;font-size:0.9rem;}
+.back-to-top{position:fixed;bottom:20px;right:20px;padding:12px 16px;background:#444;color:white;border:none;border-radius:8px;cursor:pointer;display:none;font-size:16px;}
 </style>
 </head>
 <body>
 <header>
 <nav>
 <a href="#brand">브랜드</a>
-<a href="#print">인쇄</a>
+<a href="#print">인쇄물</a>
 <a href="#book">책</a>
 <a href="#sports">스포츠</a>
 <a href="#digital">디지털</a>
-<a href="#contact">연락처</a>
+<a href="#contact">문의</a>
 </nav>
 </header>
 
 <div class="hero">
-<h1>SampleDesign 쇼케이스</h1>
-<p>브랜딩, 인쇄, 책, 스포츠 비주얼 및 디지털 디자인의 창의적인 솔루션.</p>
+<h1>샘플디자인 쇼케이스</h1>
+<p>브랜딩, 인쇄, 책, 스포츠 시각물 및 디지털 디자인 분야의 창의적 솔루션 제공</p>
 <a href="#brand">작품 보기</a>
 </div>
 
 <section id="brand">
 <div class="text">
 <h2>브랜드 디자인</h2>
-<p>관객에게 공감을 주는 강력한 시각적 아이덴티티를 구축하여 브랜드를 돋보이게 합니다.</p>
+<p>관객에게 공감을 주는 강력한 시각적 아이덴티티를 만들어 브랜드를 돋보이게 합니다.</p>
 </div>
-<img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?..." alt="Brand Design">
+<img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=60" alt="Brand Design">
 </section>
 
 <section id="print">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?..." alt="Print Design">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=60" alt="Print Design">
 <div class="text">
-<h2>인쇄 디자인</h2>
-<p>메시지를 효과적으로 전달하도록 설계된 시선을 끄는 브로셔, 포스터 및 캠페인.</p>
+<h2>인쇄물 디자인</h2>
+<p>메시지를 효과적으로 전달할 수 있도록 설계된 시선을 끄는 브로셔, 포스터 및 캠페인.</p>
 </div>
 </section>
 
 <section id="book">
 <div class="text">
 <h2>책 디자인</h2>
-<p>표지 아트부터 우아한 레이아웃까지, 우리의 책 디자인은 이야기를 생생하게 만듭니다.</p>
+<p>책 표지부터 우아한 레이아웃까지, 우리의 책 디자인은 이야기를 생생하게 표현합니다.</p>
 </div>
-<img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?..." alt="Book Design">
+<img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=60" alt="Book Design">
 </section>
 
 <section id="sports">
-<img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?..." alt="Sports Design">
+<img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=60" alt="Sports Design">
 <div class="text">
 <h2>스포츠 디자인</h2>
-<p>팀, 이벤트 및 스포츠 캠페인을 위한 역동적인 그래픽으로 활력과 흥분을 제공합니다.</p>
+<p>팀, 이벤트 및 스포츠 캠페인을 위한 역동적인 그래픽으로 에너지와 흥분을 전달합니다.</p>
 </div>
 </section>
 
 <section id="digital">
 <div class="text">
 <h2>디지털 디자인</h2>
-<p>현대적인 UI/UX, 웹사이트 및 SNS 크리에이티브로 온라인 관객을 사로잡습니다.</p>
+<p>현대적인 UI/UX, 웹사이트 및 소셜 미디어 크리에이티브로 온라인 관객과 소통합니다.</p>
 </div>
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?..." alt="Digital Design">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=60" alt="Digital Design">
 </section>
 
 <section id="contact">
 <div class="text">
-<h2>연락처</h2>
-<p><strong>hello@sampledesign.com</strong> 으로 이메일을 보내거나 소셜 미디어에서 연결하세요.</p>
+<h2>문의</h2>
+<p><strong>hello@sampledesign.com</strong>으로 이메일을 보내거나 소셜 미디어에서 연결하세요.</p>
 </div>
 </section>
 
@@ -79,8 +167,14 @@
 
 <button class="back-to-top" onclick="scrollToTop()">↑ Top</button>
 <script>
-window.addEventListener('scroll', ()=>{const btn=document.querySelector('.back-to-top');if(window.scrollY>300)btn.style.display='block';else btn.style.display='none';});
-function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+window.addEventListener('scroll', ()=>{
+  const btn=document.querySelector('.back-to-top');
+  if(window.scrollY>300) btn.style.display='block';
+  else btn.style.display='none';
+});
+function scrollToTop(){
+  window.scrollTo({top:0,behavior:'smooth'});
+}
 </script>
 </body>
 </html>
